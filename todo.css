@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+}
+
+header {
+  position: relative;
+}
+
+#container {
+  background-color: hsla(0, 0%, 50%, 0.11);
+  height: 100vh;
+}
+
+#container, #add, #list, #filters, input {
+  transition: all 200ms ease;
+}
+
+#headImagedark,
+#iconSun,
+#theme {
+  display: none;
+}
+
+
+.headImage {
+  width: 100%;
+}
+
+#headerContent {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: -webkit-fill-available;
+  margin: 3em 1em 3em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#headerContent span {
+  font-size: 24px;
+  color: white;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+}
+
+#headerContent span:last-of-type {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#content {
+  margin: 0 1em;
+  position: relative;
+  top: -5.8em;
+}
+
+#add,
+#list,
+#filters {
+  padding: 1em;
+  background-color: white;
+  border-radius: 0.3em;
+  vertical-align: middle;
+}
+
+#add {
+  display: flex;
+}
+
+#list {
+  padding: 0;
+  box-shadow: 0px 2px 20px #00000020;
+}
+
+#submit {
+  height: 19px;
+  width: 19px;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 50%;
+}
+
+#submit span {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+#addNew {
+  border: none;
+  width: 100%;
+  display: inline;
+  margin-left: 5px;
+}
+
+#filters,
+#dragDrop {
+  padding: 1em 3em;
+  text-align: center;
+}
+
+#list,
+#filters,
+#dragDrop {
+  margin-top: 1em;
+}
+
+#listTools,
+#filters {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listTools {
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+#listTools span {
+  color: gray;
+}
+
+#listTools span:last-of-type:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#filters {
+  justify-content: space-around;
+  box-shadow: 0px 2px 20px #00000020; 
+}
+
+#largeFilters {
+  display: none;
+}
+
+#filters input {
+  display: none;
+}
+
+#i1:checked ~ .all, #r1:checked ~ .all {
+  color: hsl(220, 98%, 61%);
+}
+
+#i2:checked ~ .active, #r2:checked ~ .active {
+  color: hsl(220, 98%, 61%);
+}
+
+#i3:checked ~ .completed, #r3:checked ~ .completed {
+  color: hsl(220, 98%, 61%);
+}
+
+#filters label {
+  color: gray;
+  font-weight: 600;
+  transition: all 200ms ease 50ms;
+}
+
+#filters label:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#dragDrop {
+  color: grey;
+}
+
+#toDo {
+  max-height: 275px;
+  padding: 0;
+  margin: 0;
+}
+
+.newTodo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: -webkit-fill-available;
+  padding: 1em;
+  border-bottom: 1px solid #00000033;
+
+}
+
+.newTodo span:first-of-type {
+  margin-left: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.newTodo span:last-of-type {
+  height: 15px;
+  width: 15px;
+}
+
+.newTodo span:last-of-type img {
+  height: 15px;
+  width: 15px;
+}
+
+.newTodo span:first-of-type,
+.newTodo span img, .itemLabel {
+  cursor: pointer;
+}
+
+.newTodo .itemLabel {
+  height: 19px;
+  width: 19px;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 50%;
+}
+
+.newTodo .itemLabel span {
+  width: 19px;
+  height: 19px;
+  margin: unset;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.newTodo .itemLabel span > img {
+  opacity: 0;
+  height: 12px;
+  width: 12px;
+  transition: all 200ms ease;
+}
+
+.newTodo span {
+  display: inline;
+}
+
+.newTodo input {
+  display: none;
+}
+
+.newTodo input:checked~span {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.newTodo input:checked ~ .itemLabel span {
+  opacity: 1;
+}
+
+.newTodo input:checked ~ .itemLabel span img {
+  opacity: 1;
+  display: inline;
+}
+
+
+.finished {
+  text-decoration: line-through;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
